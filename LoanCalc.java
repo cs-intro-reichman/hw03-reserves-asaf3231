@@ -92,7 +92,7 @@ public class LoanCalc {
 		
 
 		for (int i = 1 ; i <= n ; i++){
-			loan = (( loan - payment) * (1 + rate));
+			loan = (( loan - payment) * (1 + (rate/100)));
 		}
 
     	return loan ;
