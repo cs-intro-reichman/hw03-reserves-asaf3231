@@ -23,12 +23,27 @@ public class Calendar0 {
 	// Tests the nDaysInMonth function.
 	private static void nDaysInMonthTest(int year) {
 		// Replace this comment with your code
+		int month = 1;
+		for(month = 1 ; month <= 12 ; month ++)
+			System.out.println("Month " + month + " has " + nDaysInMonth(month, year) + " days" );  
+
+			
 	}
 
 	// Returns true if the given year is a leap year, false otherwise.
 	public static boolean isLeapYear(int year) {
-	    // Replace the following statement with your code
-		return false;
+
+		boolean isLeapYear = false ; 
+		
+		isLeapYear = ((year % 400) == 0);
+
+		if ( isLeapYear)
+			return isLeapYear; 
+
+		else {
+			isLeapYear = ((((year % 4) == 0) && ((year % 100) != 0)));
+			return isLeapYear ; 
+		}	
 	}
 	 
 	// Returns the number of days in the given month and year.
@@ -36,7 +51,69 @@ public class Calendar0 {
 	// February has 28 days in a common year, and 29 days in a leap year.
 	// All the other months have 31 days.
 	public static int nDaysInMonth(int month, int year) {
-		// Replace the following statement with your code
-		return 0;
+		int monthnumber = 0 ;
+		
+		// common year
+		if (!isLeapYear(year)) {
+			switch (month) {
+				case 1:  monthnumber = 31 ;
+						break;
+				case 2:  monthnumber = 28 ;
+						break;
+				case 3:  monthnumber = 31 ; 
+						break;
+				case 4:  monthnumber = 30 ;
+						break;
+				case 5:  monthnumber = 31 ;
+						break;
+				case 6:  monthnumber = 30 ;
+						break;
+				case 7:  monthnumber = 31 ;
+						break;
+				case 8:  monthnumber = 31 ;
+						break;
+				case 9:  monthnumber = 30 ;
+						break;
+				case 10: monthnumber = 31 ;
+						break;
+				case 11: monthnumber = 30 ;
+						break;
+				case 12: monthnumber = 31 ;
+						break;
+			}
+			
+			return monthnumber ;
+
+		} else { // leep year
+			switch (month) {
+				case 1:  monthnumber = 31 ;
+						break;
+				case 2:  monthnumber = 29 ;
+						break;
+				case 3:  monthnumber = 31 ; 
+						break;
+				case 4:  monthnumber = 30 ;
+						break;
+				case 5:  monthnumber = 31 ;
+						break;
+				case 6:  monthnumber = 30 ;
+						break;
+				case 7:  monthnumber = 31 ;
+						break;
+				case 8:  monthnumber = 31 ;
+						break;
+				case 9:  monthnumber = 30 ;
+						break;
+				case 10: monthnumber = 31 ;
+						break;
+				case 11: monthnumber = 30 ;
+						break;
+				case 12: monthnumber = 31 ;
+						break;
+			}
+
+			return monthnumber ;
+		
+		}
 	}
 }
