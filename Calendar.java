@@ -29,7 +29,7 @@ public class Calendar{
 	 		//// if statement with the condition (debugDaysCounter == n)	 			
 		} 
 		if  ( dayOfWeek == 1){
-			System.out.println(dayOfMonth + "/" + month + "/" + year + " sunday");
+			System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
 		} else {
 			System.out.println(dayOfMonth + "/" + month + "/" + year) ; 
 		}
