@@ -23,11 +23,17 @@ public class Calendar{
 	    //// of the while loop with the necessary condition
 		while (year < givenyear ) {
 			//// Write the body of the while
-			debugDaysCounter++; 
 			advance();
+			debugDaysCounter++; 
 	 		//// If you want to stop the loop after n days, replace the condition of the
 	 		//// if statement with the condition (debugDaysCounter == n)	 			
 		} 
+		if  ( dayOfWeek == 1){
+			System.out.println(dayOfMonth + "/" + month + "/" + year + " sunday");
+		} else {
+			System.out.println(dayOfMonth + "/" + month + "/" + year) ; 
+		}
+			
 		while ( year == givenyear ){
 			
 			debugDaysCounter++; 
@@ -40,7 +46,6 @@ public class Calendar{
 			} else {
 				System.out.println(dayOfMonth + "/" + month + "/" + year) ; 
 			}
-			
 		}
 		dayOfWeek = 2 ; // set after 1 running
 		//System.out.println(debugDaysCounter);
@@ -64,6 +69,7 @@ public class Calendar{
 			if ( dayOfWeek > 8){
 				dayOfWeek = 1 ;
 			}
+			
 	} 
 		 
     // Returns true if the given year is a leap year, false otherwise.
